@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CAMPEONATO DE JOGOS ELETRÔNICOS</h1>
+    </header>
+    <main>
+      <div id="secao_um">
+        <h3>CAMPEONATO DE JOGOS ELETRÔNICOS</h3>
+        <p>
+          Prepare-se para viver a emoção dos eSports como nunca antes! Vem aí o
+          Campeonato de Jogos Eletrônicos, um evento feito para gamers que
+          curtem adrenalina, competição e, claro, muita diversão!
+        </p>
+      </div>
+      <div id="secao_dois">
+        <h1>DATA DO EVENTO</h1>
+        <h2>20/04/2025</h2>
+      </div>
+      <div id="secao_tres">
+        <form action="" onsubmit="return Enviar()">
+          <h2>SE CADASTRANDO...</h2>
+          <label for=""> Nome da equipe: </label>
+          <br />
+          <input placeholder="Nome" type="text" />
+          <br />
+          <label for=""> E-mail: </label>
+          <br />
+          <input placeholder="Email" type="email" />
+          <br />
+          <label for=""> Nome do jogo: </label>
+          <br />
+          <input placeholder="Nome" type="text" />
+          <br />
+          <label for=""> Login </label>
+          <br />
+          <input placeholder="Login" type="text" />
+          <br />
+          <label for=""> Senha</label>
+          <br />
+          <input placeholder="Senha" type="text" />
+          <br />
+          <button onclick="Enviar()" type="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>Todos os direitos estão reservados</p>
+    </footer>
+  </body>
+
+  <script>
+    function Enviar() {
+      // verificando se os campos estão preenchidos
+      const inputs = document.querySelectorAll("input");
+      for (let input of inputs) {
+        if (input.value.trim() === "") {
+          alert("PREENCHA TODOS OS CAMPOS!");
+          return false; // caso o campo esteja vazio irá retornar falso ( impede o envio )
+        }
+      }
+      alert("ENVIADO COM SUCESSO!");
+      return true;
+    }
+  </script>
+</html>
